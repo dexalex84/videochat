@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
   
-  root 'layouts#index'
-  #get 'index => layouts/index'
+  root 'main#index'
+  get 'create'=>'rooms#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
