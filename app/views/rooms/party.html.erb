@@ -1,0 +1,17 @@
+<script src="//static.opentok.com/webrtc/v2.2/js/opentok.min.js" ></script>
+<script type="text/javascript">
+  var apiKey    = 45139402;
+  var sessionId = '<%=@room.sessionId%>';
+  var token     = '<%=@tok_token%>';
+ 
+  var session = OT.initSession(apiKey, sessionId);
+ 
+  session.on("streamCreated", function(event) {
+    session.subscribe(event.stream);
+  });
+ 
+  session.connect(token, function(error) {
+    var publisher = OT.initPublisher();
+    session.publish(publisher);
+  });
+</script>

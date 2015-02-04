@@ -10,7 +10,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3.3'
-
+gem 'opentok', '~> 2.2.3'
+#gem 'strong_parameters', '~> 0.2.3'
 
 group :development, :test do
   gem 'byebug'

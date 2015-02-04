@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
   
-  root 'main#index'
-  get 'create'=>'rooms#create'
+  #root 'main#index'
+  #get 'create'=>'rooms#create'
+  get 'main' =>'main#index'
+  root :to => 'rooms#index'
+  resources :rooms
+  match "/party/:id", :to => 'rooms#party', :as => :party, :via => :get
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
